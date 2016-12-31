@@ -15,7 +15,7 @@ if (isMobile) {
 }
 
 var renderer = PIXI.autoDetectRenderer((xratio+300) * scaling, yratio * scaling, {backgroundColor : 0x2C3E50});
-document.getElementById("canvas").appendChild(renderer.view);
+document.body.appendChild(renderer.view);
 var stage = new PIXI.Container();
 var loader = PIXI.loader;
 var resources = PIXI.loader.resources;
@@ -28,9 +28,10 @@ var graphics = new PIXI.Graphics();
 loadImages();
 console.log("Loading!");
 loadBossResources("in_1_wriggle")
-loadBossResources("in_4_marisa")
+// loadBossResources("in_4_marisa")
+loadBossResources("in_5_reisen")
 // loadBoss("in_1_wriggle");
-loadBoss("in_4_marisa");
+loadBoss("in_5_reisen");
 
 loader.load(init);
 function init()
